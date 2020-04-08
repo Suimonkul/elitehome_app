@@ -22,10 +22,11 @@ class ProductList extends Component {
         });
     }
 
+
     render() {
 
         return (
-            <div className="row pb-5 mb-4">
+            <div className="row pb-5 mb-4 bg-light">
                 {this.state.product.map(c =>
                     <div className="col-lg-3 col-md-6 mb-4 mb-lg-0" key={c.id}>
                         <div className="card rounded shadow-sm border-0">
@@ -41,6 +42,7 @@ class ProductList extends Component {
             </div>
         );
     }
+
 }
 
 export default ProductList;

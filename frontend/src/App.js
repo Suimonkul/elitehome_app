@@ -18,7 +18,6 @@ const BaseLayout = () => (
         <div className="content">
             <Route path="/" exact component={ProductList}/>
 
-
         </div>
 
     </div>
