@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {BrowserRouter} from 'react-router-dom'
-import {Route, Link} from 'react-router-dom'
+import {Route, Link, Switch} from 'react-router-dom'
 
 import ProductList from './ProductList'
 import './App.css';
+import MorePage from "./MorePage";
 
 const BaseLayout = () => (
     <div className="container-fluid">
@@ -15,13 +16,18 @@ const BaseLayout = () => (
             </button>
         </nav>
 
-        <div className="content">
-            <Route path="/" exact component={ProductList}/>
 
+        <div className="content">
+            <Switch>
+                <Route exact path='/' component={ProductList}/>
+                <Route path='/morepage' component={MorePage}/>
+            </Switch>
         </div>
+
 
     </div>
 );
+
 
 class App extends Component {
     render() {
